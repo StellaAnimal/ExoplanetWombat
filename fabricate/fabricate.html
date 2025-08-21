@@ -13,10 +13,10 @@
             <p>두 분의 아름다운 이름을 입력하고 궁합을 확인해보세요.</p>
             <div class="input-group">
 
-                <input type="text" id="name1" placeholder="첫 번째 이름" maxlength="10">
+                <input type="text" id="name1" aria-label="첫 번째 이름" placeholder="첫 번째 이름" maxlength="10">
 
 
-                <input type="text" id="name2" placeholder="두 번째 이름" maxlength="10">
+                <input type="text" id="name2" aria-label="두 번째 이름" placeholder="두 번째 이름" maxlength="10">
 
             </div>
             <button id="calculate-btn" onclick="calculateCompatibility()">궁합 계산하기</button>
@@ -35,9 +35,9 @@
             <p>특정 이름 조합의 궁합 점수를 고정할 수 있습니다.<br>(새로고침 시 초기화)</p>
             <div class="input-group-sidebar">
 
-                <input type="text" id="fixed-name1" placeholder="첫 번째 이름" maxlength="10">
-                <input type="text" id="fixed-name2" placeholder="두 번째 이름" maxlength="10">
-                <input type="number" id="fixed-score" placeholder="고정 점수 (0-100)" min="0" max="100">
+                <input type="text" id="fixed-name1" aria-label="첫 번째 이름" placeholder="첫 번째 이름" maxlength="10">
+                <input type="text" id="fixed-name2" aria-label="두 번째 이름" placeholder="두 번째 이름" maxlength="10">
+                <input type="number" id="fixed-score" aria-label="고정점수" placeholder="고정 점수 (0-100)" min="0" max="100">
                 <button id="add-fixed-btn">추가</button>
             </div>
             <p style="margin-top: 1.5em;">- 저장된 목록 -</p>
@@ -46,13 +46,5 @@
         </aside>
 
         <script src="script.js"></script>
-        <footer>
-            (c) 2025 이하준. 단순히 서로 재미있으라고 선의로 제작하였습니다. 악의는 전혀 없습니다.
-            <label for="fixed-name1" class="visually-hidden">첫 번째 이름</label>
-            <label for="fixed-name2" class="visually-hidden">두 번째 이름</label>
-            <label for="fixed-score" class="visually-hidden">고정 점수</label>
-            <label for="name2" class="visually-hidden">두 번째 이름</label>
-            <label for="name1" class="visually-hidden">첫 번째 이름</label>
-        </footer>
     </body>
 </html>
