@@ -11,8 +11,16 @@
 
 .visually-hidden {
     position: absolute;
-    left: -9999px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
+
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
@@ -31,13 +39,13 @@ body {
 .container {
     width: 90%;
     max-width: 800px;
-    margin: 40px auto;
     padding: 30px;
     background-color: var(--card-background);
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.15);
     animation: fadeIn 1s ease-in-out;
-    margin-bottom: 20px; /* 푸터 공간 확보 */
+    /* 푸터 공간 확보 */
+    margin: 40px auto 20px;
 }
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }

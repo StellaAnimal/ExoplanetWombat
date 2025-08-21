@@ -12,10 +12,10 @@
             <h1>이름 궁합 계산기</h1>
             <p>두 분의 아름다운 이름을 입력하고 궁합을 확인해보세요.</p>
             <div class="input-group">
-                <label for="name1" class="visually-hidden">첫 번째 이름</label>
+
                 <input type="text" id="name1" placeholder="첫 번째 이름" maxlength="10">
 
-                <label for="name2" class="visually-hidden">두 번째 이름</label>
+
                 <input type="text" id="name2" placeholder="두 번째 이름" maxlength="10">
 
             </div>
@@ -34,9 +34,7 @@
             <h2>💖 조작 메뉴</h2>
             <p>특정 이름 조합의 궁합 점수를 고정할 수 있습니다.<br>(새로고침 시 초기화)</p>
             <div class="input-group-sidebar">
-                <label for="fixed-name1" class="visually-hidden">첫 번째 이름</label>
-                <label for="fixed-name2" class="visually-hidden">두 번째 이름</label>
-                <label for="fixed-score" class="visually-hidden">고정 점수</label>
+
                 <input type="text" id="fixed-name1" placeholder="첫 번째 이름" maxlength="10">
                 <input type="text" id="fixed-name2" placeholder="두 번째 이름" maxlength="10">
                 <input type="number" id="fixed-score" placeholder="고정 점수 (0-100)" min="0" max="100">
@@ -46,6 +44,15 @@
             <ul id="saved-list">
             </ul>
         </aside>
+
         <script src="script.js"></script>
+        <footer>
+            (c) 2025 이하준. 단순히 서로 재미있으라고 선의로 제작하였습니다. 악의는 전혀 없습니다.
+            <label for="fixed-name1" class="visually-hidden">첫 번째 이름</label>
+            <label for="fixed-name2" class="visually-hidden">두 번째 이름</label>
+            <label for="fixed-score" class="visually-hidden">고정 점수</label>
+            <label for="name2" class="visually-hidden">두 번째 이름</label>
+            <label for="name1" class="visually-hidden">첫 번째 이름</label>
+        </footer>
     </body>
 </html>
