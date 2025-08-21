@@ -4,112 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메인 페이지 - 개선</title>
-    <style>
-        /* CSS 변수 설정으로 색상 관리 용이하게 함 */
-        :root {
-            --primary-bg: #f4f4f9;
-            --container-bg: #ffffff;
-            --border-color: #e0e0e0;
-            --text-color: #333333;
-            --link-bg: #f0f8ff;
-            --link-hover-bg: #e6f2ff;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--primary-bg);
-            color: var(--text-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 400px;
-            background-color: var(--container-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        h1 {
-            color: #4a4e69;
-            margin-bottom: 10px;
-            font-size: 2em;
-        }
-
-        p {
-            margin-bottom: 30px;
-            color: #6c757d;
-        }
-
-        .link-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        a {
-            background-color: var(--link-bg);
-            color: #007bff;
-            text-decoration: none;
-            padding: 15px 25px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-
-        a:hover {
-            background-color: var(--link-hover-bg);
-            transform: translateY(-3px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            text-align: center;
-        }
-
-        small {
-            color: #999999;
-            font-size: 0.8em;
-        }
-
-        /* 컨테이너에 로딩 애니메이션 적용 */
-        .container {
-            opacity: 0; /* 초기 투명도를 0으로 설정하여 숨김 */
-            animation: fadeIn 1s ease-in-out forwards;
-        }
-
-        /* @keyframes를 사용하여 fadeIn 애니메이션 정의 */
-        @keyframes fadeIn {
-            from {
-                opacity: 0; /* 시작: 완전히 투명 */
-                transform: translateY(20px); /* 아래에서 위로 살짝 올라오는 효과 추가 */
-            }
-            to {
-                opacity: 1; /* 끝: 완전히 불투명 */
-                transform: translateY(0); /* 원래 위치로 이동 */
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
     <h1>환영합니다!</h1>
     <p>아래 메뉴를 선택하여 다른 페이지로 이동해 보세요.</p>
     <div class="link-container">
-        <a href="fabricate.html">주작 이름 궁합 페이지로 이동</a>
-        <a href="dongeul.html">동글이 페이지로 이동</a>
+        <a href="fabricate/fabricate.html">주작 이름 궁합 페이지로 이동</a>
+        <a href="dongeul/dongeul.html">동글이 페이지로 이동</a>
     </div>
 </div>
 <footer>

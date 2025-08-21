@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>이름 궁합 계산기</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>이름 궁합 계산기</h1>
+            <p>두 분의 아름다운 이름을 입력하고 궁합을 확인해보세요.</p>
+            <div class="input-group">
+                <label for="name1" class="visually-hidden">첫 번째 이름</label>
+                <input type="text" id="name1" placeholder="첫 번째 이름" maxlength="10">
+
+                <label for="name2" class="visually-hidden">두 번째 이름</label>
+                <input type="text" id="name2" placeholder="두 번째 이름" maxlength="10">
+
+            </div>
+            <button id="calculate-btn" onclick="calculateCompatibility()">궁합 계산하기</button>
+            <div id="result-box">
+                <div id="loading-state">운명을 계산하는 중...</div>
+                <div id="score-display"></div>
+                <div id="message-display"></div>
+            </div>
+        </div>
+
+        <button id="secret-toggle-btn" onclick="toggleSidebar()">👑</button>
+
+        <aside id="sidebar">
+            <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+            <h2>💖 조작 메뉴</h2>
+            <p>특정 이름 조합의 궁합 점수를 고정할 수 있습니다.<br>(새로고침 시 초기화)</p>
+            <div class="input-group-sidebar">
+                <label for="fixed-name1" class="visually-hidden">첫 번째 이름</label>
+                <label for="fixed-name2" class="visually-hidden">두 번째 이름</label>
+                <label for="fixed-score" class="visually-hidden">고정 점수</label>
+                <input type="text" id="fixed-name1" placeholder="첫 번째 이름" maxlength="10">
+                <input type="text" id="fixed-name2" placeholder="두 번째 이름" maxlength="10">
+                <input type="number" id="fixed-score" placeholder="고정 점수 (0-100)" min="0" max="100">
+                <button id="add-fixed-btn">추가</button>
+            </div>
+            <p style="margin-top: 1.5em;">- 저장된 목록 -</p>
+            <ul id="saved-list">
+            </ul>
+        </aside>
+        <script src="script.js"></script>
+    </body>
+</html>
