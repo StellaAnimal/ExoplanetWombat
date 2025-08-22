@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.wrapper {
+    flex-grow: 1; /* 남은 공간을 모두 차지하도록 설정 */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1; /* main이 남은 공간을 모두 차지하도록 설정 */
+}
+
+.name {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+#changeName {
+    font-size: 2.5em;
+    color: #2b2b3a;
+    margin: 0;
+    line-height: 1.2;
+    transition: color 0.5s ease-in-out;
+}
+
+.message {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    animation: slideUp 1s ease-in-out 0.5s forwards;
+    opacity: 0;
+}
+
+.message p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #555;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.message small {
+    margin: 10px 0;
+    font-size: 0.5em;
+    color: #a3a3a3;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+
+p.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+small.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+footer {
+    color: #fff;
+    padding: 20px 0; /* 상하 여백은 유지, 좌우 여백 제거 */
+    text-align: center;
+
+    /* 화면 너비 전체를 채우는 핵심 코드 */
+    width: 100%;
+    margin: 0; /* 좌우 마진 제거 */
+}
+
+footer small {
+    font-size: 6px; /* small 태그의 글씨 크기 */
+    color: #aaaaaa; /* small 태그의 글씨 색상 */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

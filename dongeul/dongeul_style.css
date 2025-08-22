@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
+
 :root {
     --primary-color: #4a69bd;
     --secondary-color: #6a89cc;
@@ -50,6 +51,11 @@ header h1 {
 header p {
     font-size: 1.2em;
     color: #7f8c8d;
+    margin-top: 0;
+}
+header small {
+    font-size: 0.5em;
+    color: #a7a9ae;
     margin-top: 0;
 }
 .profile-section {
