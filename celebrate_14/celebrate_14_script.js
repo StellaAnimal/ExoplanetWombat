@@ -23,7 +23,7 @@ script.onload = () => {
 setTimeout(function() {
     const titleElement = document.getElementById('changeName');
     titleElement.textContent = '송승후님 생일 축하합니다!';
-}, 500);
+}, 1500);
 
 const messageContainer = document.querySelector('.message');
 const messageLines = messageContainer.querySelectorAll('p');
