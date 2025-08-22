@@ -71,7 +71,7 @@ main {
 
 .message small {
     margin: 10px 0;
-    font-size: 0.5em;
+    font-size: 0.7em;
     color: #a3a3a3;
     opacity: 0;
     transform: translateY(20px);
