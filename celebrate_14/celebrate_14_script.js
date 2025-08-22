@@ -15,15 +15,13 @@ script.onload = () => {
 
     // 페이지 접속 시 폭죽 발사
     setTimeout(shootConfetti, 500); // 0.5초 후
+    setTimeout(shootConfetti, 1000); // 1.0초 후
+    setTimeout(shootConfetti, 1500); // 1.5초 후
     setTimeout(shootConfetti, 2000); // 2.0초 후
     setTimeout(shootConfetti, 2500); // 2.5초 후
     setTimeout(shootConfetti, 3000); // 3.0초 후
 };
 
-setTimeout(function() {
-    const titleElement = document.getElementById('changeName');
-    titleElement.textContent = '송승후님 생일 축하합니다!';
-}, 1500);
 
 const messageContainer = document.querySelector('.message');
 const messageLines = messageContainer.querySelectorAll('p');
