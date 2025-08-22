@@ -12,25 +12,39 @@ body {
     color: #333;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; 속성 제거 */
-    align-items: center; /* 콘텐츠를 가로 중앙에 정렬 */
+    /* justify-content: center;와 align-items: center;를 제거 */
     min-height: 100vh;
     margin: 0;
-    padding: 20px;
+    padding: 0; /* body의 padding을 0으로 설정하여 스크롤 문제 해결 */
     text-align: center;
 }
 
 .wrapper {
-    flex-grow: 1; /* 남은 공간을 모두 차지하도록 설정 */
+    flex-grow: 1; /* 남은 공간을 모두 차지 */
+    width: 100%;
+    max-width: 600px; /* PC 환경에서 최대 너비 설정 */
+    padding: 0 20px; /* 좌우 여백을 주어 모바일에서 콘텐츠가 가장자리에 붙지 않게 함 */
+    margin: 0 auto; /* 중앙 정렬 */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    /* 최소 높이를 설정하여 콘텐츠가 짧을 때도 일정 공간을 확보 */
-    min-height: calc(100vh - 40px); /* body의 padding 40px 제외 */
+    justify-content: center; /* 콘텐츠를 세로 중앙에 배치 */
+    align-items: center; /* 콘텐츠를 가로 중앙에 배치 */
 }
 
-.name, .message {
+.message {
+    width: 100%; /* wrapper의 100% 너비를 사용 */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    animation: slideUp 1s ease-in-out 0.5s forwards;
+    opacity: 0;
+}
+
+
+                  .name, .message {
     width: 90%; /* 화면 너비에 맞춰 90%로 조절하여 좌우 여백 확보 */
     max-width: 600px;
     margin-left: auto; /* 자동 마진으로 중앙 정렬 */
@@ -56,19 +70,6 @@ main {
     margin: 0;
     line-height: 1.2;
     transition: color 0.5s ease-in-out;
-}
-
-.message {
-    width: 100%;
-    max-width: 600px;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    line-height: 1.8;
-    margin-bottom: 20px;
-    animation: slideUp 1s ease-in-out 0.5s forwards;
-    opacity: 0;
 }
 
 .message p {
