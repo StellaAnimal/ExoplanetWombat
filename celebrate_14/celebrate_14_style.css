@@ -60,6 +60,7 @@ main {
 }
 
 .message p,
+.message a,
 .message small {
     font-size: 1.1em;
     color: #555;
@@ -74,6 +75,11 @@ main {
     color: #a3a3a3;
 }
 
+.message a {
+    color: #0071ff;
+}
+
+a.visible,
 p.visible,
 small.visible {
     opacity: 1;

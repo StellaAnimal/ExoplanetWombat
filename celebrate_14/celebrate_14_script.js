@@ -26,8 +26,8 @@ script.onload = () => {
 const messageContainer = document.querySelector('.message');
 const messageLines = messageContainer.querySelectorAll('p');
 const messageLines_small = messageContainer.querySelectorAll('small');
-
-const allMessageLines = [...messageLines, ...messageLines_small];
+const messageLines_a = messageContainer.querySelectorAll('a');
+const allMessageLines = [...messageLines, ...messageLines_small, ...messageLines_a];
 function checkVisibility() {
     const containerTop = messageContainer.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
