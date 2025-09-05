@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>이름 궁합 계산기</title>
-        <link rel="stylesheet" href="fabricate_style.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이름 궁합 계산기</title>
+    <link rel="stylesheet" href="fabricate_style.css">
+</head>
+<body>
+<div id="tsparticles"></div>
+<div class="container">
 
-        <div class="container">
-            <h1>이름 궁합 계산기</h1>
-            <p>두 분의 아름다운 이름을 입력하고 궁합을 확인해보세요.</p>
-            <div class="input-group">
+    <h1>이름 궁합 계산기</h1>
+    <p>두 분의 아름다운 이름을 입력하고 궁합을 확인해보세요.</p>
+    <div class="input-group">
+        <input type="text" id="name1" placeholder="첫 번째 이름" maxlength="10">
+        <input type="text" id="name2" placeholder="두 번째 이름" maxlength="10">
+    </div>
+    <button id="calculate-btn" onclick="calculateCompatibility()">궁합 계산하기</button>
+    <div id="result-box">
+        <div id="loading-state">운명을 계산하는 중...</div>
+        <div id="score-display"></div>
+        <div id="message-display"></div>
+    </div>
+</div>
 
-                <input type="text" id="name1" aria-label="첫 번째 이름" placeholder="첫 번째 이름" maxlength="10">
+<button id="secret-toggle-btn" onclick="toggleSidebar()">🎲</button>
 
+<aside id="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+    <h2>조작 메뉴</h2>
+    <p>특정 이름 조합의 궁합 점수를 고정할 수 있습니다.<br>(새로고침 시 초기화)</p>
+    <div class="input-group-sidebar">
+        <input type="text" id="fixed-name1" placeholder="첫 번째 이름" maxlength="10">
+        <input type="text" id="fixed-name2" placeholder="두 번째 이름" maxlength="10">
+        <input type="number" id="fixed-score" placeholder="고정 점수 (0-100)" min="0" max="100">
+        <button id="add-fixed-btn">추가</button>
+    </div>
+    <p>- 저장된 목록 -</p>
+    <ul id="saved-list"></ul>
+</aside>
 
-                <input type="text" id="name2" aria-label="두 번째 이름" placeholder="두 번째 이름" maxlength="10">
-
-            </div>
-            <button id="calculate-btn" onclick="calculateCompatibility()">궁합 계산하기</button>
-            <div id="result-box">
-                <div id="loading-state">운명을 계산하는 중...</div>
-                <div id="score-display"></div>
-                <div id="message-display"></div>
-            </div>
-        </div>
-
-        <button id="secret-toggle-btn" onclick="toggleSidebar()">🎲</button>
-
-        <aside id="sidebar">
-            <button class="close-btn" onclick="toggleSidebar()">&times;</button>
-            <h2>조작 메뉴</h2>
-            <p>특정 이름 조합의 궁합 점수를 고정할 수 있습니다.<br>(새로고침 시 초기화)</p>
-            <div class="input-group-sidebar">
-
-                <input type="text" id="fixed-name1" aria-label="첫 번째 이름" placeholder="첫 번째 이름" maxlength="10">
-                <input type="text" id="fixed-name2" aria-label="두 번째 이름" placeholder="두 번째 이름" maxlength="10">
-                <input type="number" id="fixed-score" aria-label="고정점수" placeholder="고정 점수 (0-100)" min="0" max="100">
-                <button id="add-fixed-btn">추가</button>
-            </div>
-            <p style="margin-top: 1.5em;">- 저장된 목록 -</p>
-            <ul id="saved-list">
-            </ul>
-        </aside>
-
-        <script src="fabricate_script.js"></script>
-    </body>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+<script src="fabricate_script.js"></script>
+</body>
 </html>
